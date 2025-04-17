@@ -12,6 +12,9 @@ int main() {
 
     window.setFramerateLimit(60);
 
+    sf::View view(sf::FloatRect(0, 0, 800, 800));
+    window.setView(view);
+
     ProxyImage proxyImage(400.0f, 400.0f, "images/testImage.png");
     MouseController mouseController(&proxyImage);
 
@@ -22,6 +25,13 @@ int main() {
             // если нажали крестик — закрыть окно
             if (event.type == sf::Event::Closed)
                 window.close();
+
+            if (event.type == sf::Event::Resized) {
+                view.setSize(event.size.width, event.size.height);
+                view.setCenter(event.size.width / 2, event.size.height / 2);
+
+                window.setView(view);
+            }
 
             mouseController.handleEvent(event, window);
         }
