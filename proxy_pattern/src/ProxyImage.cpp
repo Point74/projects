@@ -8,6 +8,7 @@ ProxyImage::ProxyImage(float width, float height, string file) :
     box.setFillColor(sf::Color::Transparent);
     box.setOutlineThickness(3);
     box.setOutlineColor(sf::Color::Cyan);
+    box.setPosition(width - box.getSize().x / 2.0f, height - box.getSize().y / 2.0f);
 }
 
 void ProxyImage::display(sf::RenderWindow& window) {
