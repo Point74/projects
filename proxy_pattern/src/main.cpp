@@ -8,7 +8,7 @@ using namespace std;
 
 
 int main() {
-    sf::RenderWindow window(sf::VideoMode(2000, 2000), "Image");
+    sf::RenderWindow window(sf::VideoMode(800, 800), "Image");
 
     window.setFramerateLimit(60);
 
