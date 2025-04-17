@@ -41,3 +41,7 @@ sf::Vector2f ProxyImage::getPosition() {
 
     } else return box.getPosition();
 }
+
+ProxyImage::~ProxyImage() {
+    delete realImage;
+}

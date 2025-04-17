@@ -18,6 +18,8 @@ class ProxyImage {
 public:
     ProxyImage(float width, float height, string file);
 
+    ~ProxyImage();
+
     void display(sf::RenderWindow& window);
 
     void moveTo(float x, float y);
