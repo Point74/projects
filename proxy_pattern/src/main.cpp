@@ -12,7 +12,7 @@ int main() {
 
     window.setFramerateLimit(60);
 
-    ProxyImage proxyImage(1000.0f, 1000.0f, "images/testImage.png");
+    ProxyImage proxyImage(400.0f, 400.0f, "images/testImage.png");
     MouseController mouseController(&proxyImage);
 
     while (window.isOpen()) {
